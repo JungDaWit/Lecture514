@@ -16,6 +16,7 @@ namespace DesignPatten
             {
                 if (_value.Equals(value)) return;
                 _value = value;
+                Notify();
             }
         }
         private UnityEvent<T> onValueChanged = new();
@@ -37,7 +38,7 @@ namespace DesignPatten
         {
             onValueChanged.RemoveAllListeners();
         }
-        private void Nitify()
+        private void Notify()
         {
             onValueChanged?.Invoke(Value);
         }
