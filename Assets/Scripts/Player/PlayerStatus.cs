@@ -22,7 +22,7 @@ public class PlayerStatus : MonoBehaviour
     public int MaxHP { get; set; }
 
     // Player Stat Event----
-    [field: SerializeField] public ObservableProperty<int> CurrentHp { get; private set; } = new();
+    public ObservableProperty<int> CurrentHp { get; private set; } = new();
 
     // Player State Event----
     public ObservableProperty<bool> IsAiming { get; private set; } = new();
